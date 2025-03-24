@@ -1,0 +1,79 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Optional: set a base font */
+    background-color: #f5f5f5; /* Optional: background color */
+}
+
+/* Main heading styling */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Container for sections */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* space between sections */
+    padding: 10px; /* spacing around container */
+}
+
+/* Section styling */
+.section {
+    border: 1px solid black; /* border */
+    padding: 20px; /* space inside section */
+    margin-bottom: 10px; /* spacing below each section */
+    position: relative; /* to position title */
+    color: #fff; /* text color */
+}
+
+/* Section colors */
+.chicken {
+    background-color: #8B4513; /* dark brown */
+}
+
+.beef {
+    background-color: #FF6347; /* tomato red */
+}
+
+.sushi {
+    background-color: #4682B4; /* steel blue */
+}
+
+/* Title positioning */
+.title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.7); /* transparent white */
+    padding: 5px; /* space around title */
+    border: 1px solid black; /* border for title */
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 992px) {
+    .section {
+        width: 32%; /* 3 equal sections side by side */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 48%; /* 2 sections in the first row */
+    }
+    .section:last-child {
+        width: 100%; /* 3rd section takes whole row */
+    }
+}
+
+@media (max-width: 767px) {
+    .section {
+        width: 100%; /* full width sections */
+    }
+}
